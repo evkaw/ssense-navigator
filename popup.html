@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSENSE Navigator</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <h1>SSENSE Navigator</h1>
+                <span class="version">v1.0.0</span>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+                <div class="shortcut-list">
+                    <div class="shortcut-item">
+                        <div class="key-combo">
+                            <kbd>←</kbd>
+                        </div>
+                        <div class="action">Previous Image</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="key-combo">
+                            <kbd>→</kbd>
+                        </div>
+                        <div class="action">Next Image</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="key-combo">
+                            <kbd>W</kbd>
+                        </div>
+                        <div class="action">Toggle Wishlist</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="key-combo">
+                            <kbd>?</kbd>
+                        </div>
+                        <div class="action">Show Help</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="size-preferences">
+                <h2>Size Preferences</h2>
+                <div class="preference-list">
+                    <div class="preference-item">
+                        <span class="category">👟 Shoes</span>
+                        <span class="sizes">EU 42, 10.5, 11</span>
+                    </div>
+                    <div class="preference-item">
+                        <span class="category">👕 Clothing</span>
+                        <span class="sizes">M, Medium</span>
+                    </div>
+                    <div class="preference-item">
+                        <span class="category">👖 Pants</span>
+                        <span class="sizes">31, 32, 31/32</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="status">
+                <div class="status-item" id="pageStatus">
+                    <span class="label">Current Page:</span>
+                    <span class="value" id="currentPage">Visit SSENSE</span>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="links">
+                <a href="https://github.com/yourusername/ssense-navigator" target="_blank" class="link">
+                    <span>📚</span> GitHub
+                </a>
+                <a href="https://github.com/yourusername/ssense-navigator/issues" target="_blank" class="link">
+                    <span>🐛</span> Report Bug
+                </a>
+            </div>
+            <div class="credit">
+                Made with ❤️ for SSENSE
+            </div>
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
