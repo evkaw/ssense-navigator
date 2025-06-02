@@ -7,30 +7,44 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
 [![GitHub Stars](https://img.shields.io/github/stars/yourusername/ssense-navigator?style=flat-square)](https://github.com/yourusername/ssense-navigator)
 
-## ✨ Features
+## ✨ Key Features
 
-### 🎯 **Smart Navigation**
-- **Arrow Key Navigation**: Use `←` and `→` to browse through product images instantly
-- **Carousel Integration**: Works seamlessly with SSENSE's modern image gallery system
-- **Visual Progress**: See your current position with clean "2/5" style indicators
+### ⌨️ **Keyboard Navigation**
+- **Arrow Key Control**: 
+  - `←` Previous product image
+  - `→` Next product image
+- **Quick Actions**:
+  - `W` Toggle wishlist status
+  - `?` Show help popup
 
-### 🧠 **Intelligent Size Selection**
-- **Automatic Detection**: Recognizes shoes, clothing, and pants automatically
-- **Personalized Preferences**: 
-  - **Shoes**: EU 42, 10.5, 11 (with smart fallbacks)
-  - **Clothing**: M, Medium sizes
-  - **Pants**: 31, 32, 31/32 waist sizes
-- **Fallback Logic**: Automatically selects closest available size if preferred isn't available
+### 🧠 **Smart Size Selection**
+- **Automatic Detection**:
+  - 👕 Clothing: M = Medium = IT48
+  - 👟 Shoes: EU 42 = US 10.5
+  - 👖 Pants: 32 = W32 = 32/34
+- **Fallback System**: Selects first available size if preferences unavailable
 
-### 💖 **One-Click Wishlist Management**
-- **Toggle Wishlist**: Press `W` to add/remove items from wishlist
-- **Smart Auto-Selection**: Automatically picks your size before adding to wishlist
-- **Clear Feedback**: Unified black notifications show exactly what happened
+### ⚙️ **Customizable Preferences**
+- **Popup Interface**:
+  - 👕 XS/S/M/L/XL clothing sizes
+  - 👟 US 8-15 / EU 39-48 shoe sizes
+  - 👖 Waist 28-40 pants sizes
+- **Cross-Device Sync**: Chrome storage keeps settings consistent
 
-### 🎨 **Clean UI Integration**
-- **Non-Intrusive**: Maintains SSENSE's minimalist design philosophy
-- **Consistent Styling**: Black notifications that match the site's aesthetic
-- **No Visual Clutter**: Works silently in the background
+### 💡 **Real-Time Feedback**
+- **Clean Notifications**:
+  - Black theme matching SSENSE aesthetic
+  - Position indicators (e.g., "Image 3/5")
+  - Error messages for missing elements
+
+### 🛠️ **Technical Excellence**
+- **Vue.js Integration**: Full compatibility with SSENSE's framework
+- **Dynamic DOM Handling**: Automatic element detection
+- **Lightweight**: Zero performance impact on browsing
+
+## 🚀 User Benefits
+- **Consistent Experience**: Unified sizes across all products
+- **Seamless Integration**: Works automatically on all SSENSE product pages
 
 ## 🎮 Keyboard Shortcuts
 
@@ -41,16 +55,18 @@
 | `W` | Toggle Wishlist | Add to wishlist (with auto size selection) or remove |
 | `?` | Show Help | Display available keyboard shortcuts |
 
-## 📸 Screenshots
+## 📸 Images & Videos
 
-### Navigation in Action
-*Screenshots showing the extension working on SSENSE product pages*
+### Navigation in Action & Wishlist Management
+<img src="https://github.com/user-attachments/assets/668bc19d-9974-4fb6-97bd-3d2fb3c260a2" width="800" height="500" alt="Image Navigation">
+<img src="https://github.com/user-attachments/assets/ec73675a-84f9-45a6-a3aa-9d945013dafa" width="800" height="500" alt="Add to Wishlist">
+<img src="https://github.com/user-attachments/assets/ff42d721-5a0f-46e5-b9d1-9bc896253454" width="800" height="500" alt="Remove from Wishlist">
 
 ### Size Selection Demo
-*Screenshots showing the auto-selection notification*
+https://github.com/user-attachments/assets/7d56aa12-a0a3-4c42-a8da-7f39f741bf02
 
-### Wishlist Management
-*Screenshots showing the wishlist toggle functionality*
+### Extensive UI
+<img src="https://github.com/user-attachments/assets/285a7cee-4062-408f-8c35-4a609b19b5f9" width="800" height="500" alt="Extensive UI">
 
 ## 🚀 Installation
 
@@ -58,65 +74,7 @@
 1. Visit the [Chrome Web Store page](https://chrome.google.com/webstore/detail/YOUR_EXTENSION_ID)
 2. Click "Add to Chrome"
 3. Confirm installation
-4. Navigate to any SSENSE product page and start using arrow keys!
-
-### From Source (For Developers)
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/yourusername/ssense-navigator.git
-   cd ssense-navigator
-   ```
-
-2. Load the extension in Chrome:
-   - Open Chrome and go to `chrome://extensions/`
-   - Enable "Developer mode" (top right toggle)
-   - Click "Load unpacked"
-   - Select the cloned repository folder
-
-3. Visit any SSENSE product page to test the extension
-
-## 🛠️ Development
-
-### Project Structure
-```
-ssense-navigator/
-├── manifest.json          # Extension manifest (Manifest V3)
-├── content.js            # Main content script
-├── popup/
-│   ├── popup.html        # Extension popup interface
-│   ├── popup.js          # Popup functionality
-│   └── popup.css         # Popup styling
-├── icons/
-│   ├── icon-16.png       # Extension icons (16x16)
-│   ├── icon-32.png       # Extension icons (32x32)
-│   ├── icon-48.png       # Extension icons (48x48)
-│   └── icon-128.png      # Extension icons (128x128)
-├── docs/                 # Documentation
-└── .github/              # GitHub Actions workflows
-```
-
-### Building and Testing
-
-1. **Local Testing**:
-   ```bash
-   # Clone and load in Chrome as described above
-   # Test on various SSENSE product pages
-   ```
-
-2. **Code Quality**:
-   ```bash
-   # Run linting (if you add ESLint)
-   npm run lint
-   
-   # Format code (if you add Prettier)
-   npm run format
-   ```
-
-3. **Package for Distribution**:
-   ```bash
-   # Create a production-ready zip file
-   zip -r ssense-navigator.zip . -x "*.git*" "node_modules/*" "*.md" "docs/*"
-   ```
+4. Navigate to any SSENSE product page and start using the extension!
 
 ### Contributing
 
@@ -158,6 +116,7 @@ We welcome contributions! Here's how to get started:
 
 ### Browser Compatibility
 - ✅ **Chrome**: Fully supported (primary target)
+- ✅ **Arc**: Supported
 - ✅ **Edge**: Supported (Chromium-based)
 - ✅ **Brave**: Supported
 - ✅ **Opera**: Supported
@@ -169,67 +128,13 @@ We welcome contributions! Here's how to get started:
 - **Local Processing**: All logic runs locally in your browser
 - **Open Source**: Complete transparency with public source code
 
-## 📋 Publishing to Chrome Web Store
-
-Follow these steps to publish your own version:
-
-### Prerequisites
-1. **Google Account**: You'll need a Google account
-2. **Developer Fee**: One-time $5 registration fee for Chrome Web Store
-3. **Extension Ready**: Complete, tested extension package
-
-### Step-by-Step Publishing
-
-1. **Prepare Your Extension**:
-   ```bash
-   # Create a clean build
-   zip -r ssense-navigator.zip . -x "*.git*" "node_modules/*" "*.md" "docs/*" "*.DS_Store"
-   ```
-
-2. **Register as Developer**:
-   - Go to [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole)
-   - Sign in with your Google account
-   - Pay the $5 one-time registration fee
-   - Complete your developer profile
-
-3. **Upload Extension**:
-   - Click "Add new item" in the dashboard
-   - Upload your ZIP file
-   - Fill out the required information:
-     - **Name**: SSENSE Navigator
-     - **Description**: Navigate SSENSE product images with arrow keys, smart size selection, and wishlist management
-     - **Category**: Shopping
-     - **Language**: English
-
-4. **Add Store Assets**:
-   - **Store Icon**: 128x128 pixel icon
-   - **Screenshots**: At least one screenshot (1280x800 or 640x400)
-   - **Promotional Images**: Optional but recommended
-
-5. **Privacy Information**:
-   - **Single Purpose**: Enhance SSENSE browsing experience with keyboard navigation
-   - **Permissions**: Explain why you need access to SSENSE domains
-   - **Data Usage**: State that no user data is collected
-
-6. **Submit for Review**:
-   - Click "Submit for Review"
-   - Wait for Google's review (usually 1-3 business days)
-   - Address any feedback if rejected
-
-### Post-Publication
-- **Monitor Reviews**: Respond to user feedback
-- **Update Regularly**: Keep the extension compatible with SSENSE changes
-- **Analytics**: Use Chrome Web Store analytics to track usage
-
 ## 🎯 Roadmap
 
 ### v1.1 - Enhanced Features
-- [ ] Configurable size preferences in popup
-- [ ] Support for multiple currencies
-- [ ] Quick view mode for product details
+- [ ] Shortcut to ADD TO BAG
+- [ ] Shortcut for clicking on the images tab
 
 ### v1.2 - Advanced Navigation  
-- [ ] Search within images
 - [ ] Zoom functionality with keyboard
 - [ ] Product comparison shortcuts
 
