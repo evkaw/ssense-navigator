@@ -1,6 +1,6 @@
 # SSENSE Navigator Chrome Extension
 
-🛍️ **Navigate SSENSE like a pro with keyboard shortcuts, smart size selection, and instant wishlist management**
+🛍️ **Navigate SSENSE like a pro with keyboard shortcuts, smart size selection, and instant wishlist management.**
 
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/YOUR_EXTENSION_ID?style=flat-square)](https://chrome.google.com/webstore/detail/YOUR_EXTENSION_ID)
 [![Users](https://img.shields.io/chrome-web-store/users/YOUR_EXTENSION_ID?style=flat-square)](https://chrome.google.com/webstore/detail/YOUR_EXTENSION_ID)
@@ -27,7 +27,7 @@
 ### ⚙️ **Customizable Preferences**
 - **Popup Interface**:
   - 👕 XS/S/M/L/XL clothing sizes
-  - 👟 US 8-15 / EU 39-48 shoe sizes
+  - 👟 US 8-15 / EU/IT 39-48 shoe sizes
   - 👖 Waist 28-40 pants sizes
 - **Cross-Device Sync**: Chrome storage keeps settings consistent
 
