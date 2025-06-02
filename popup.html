@@ -1,92 +1,410 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SSENSE Navigator</title>
-    <link rel="stylesheet" href="popup.css">
+    <meta charset="utf-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 480px;
+            min-height: 400px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #ffffff;
+            color: #333;
+        }
+        
+        .header {
+            background: #000;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .content {
+            padding: 20px;
+        }
+        
+        .shortcuts-section {
+            margin-bottom: 25px;
+        }
+        
+        .shortcuts-section h2 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #333;
+        }
+        
+        .shortcuts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        
+        .shortcut-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        
+        .key {
+            background: #000;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-weight: bold;
+            min-width: 24px;
+            text-align: center;
+            font-size: 11px;
+        }
+        
+        .sizes-section {
+            margin-bottom: 20px;
+        }
+        
+        .sizes-section h2 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .size-group {
+            margin-bottom: 15px;
+            padding: 12px;
+            border: 1px solid #e1e5e9;
+            border-radius: 6px;
+            background: #fafbfc;
+        }
+        
+        .size-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 8px;
+        }
+        
+        .size-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+            padding: 6px;
+            font-size: 11px;
+        }
+        
+        .size-option input[type="checkbox"] {
+            margin-top: 2px;
+        }
+        
+        .size-label {
+            line-height: 1.3;
+        }
+        
+        .size-main {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .size-includes {
+            color: #666;
+            font-size: 10px;
+            margin-top: 2px;
+        }
+        
+        .actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #e1e5e9;
+        }
+        
+        .btn {
+            flex: 1;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .btn-primary {
+            background: #000;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #333;
+        }
+        
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #333;
+            border: 1px solid #dee2e6;
+        }
+        
+        .btn-secondary:hover {
+            background: #e9ecef;
+        }
+        
+        .status {
+            margin-top: 10px;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            text-align: center;
+            display: none;
+        }
+        
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="logo">
-                <h1>SSENSE Navigator</h1>
-                <span class="version">v1.0.0</span>
-            </div>
-        </header>
-
-        <main class="content">
-            <section class="shortcuts">
-                <h2>Keyboard Shortcuts</h2>
-                <div class="shortcut-list">
-                    <div class="shortcut-item">
-                        <div class="key-combo">
-                            <kbd>←</kbd>
-                        </div>
-                        <div class="action">Previous Image</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="key-combo">
-                            <kbd>→</kbd>
-                        </div>
-                        <div class="action">Next Image</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="key-combo">
-                            <kbd>W</kbd>
-                        </div>
-                        <div class="action">Toggle Wishlist</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="key-combo">
-                            <kbd>?</kbd>
-                        </div>
-                        <div class="action">Show Help</div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="size-preferences">
-                <h2>Size Preferences</h2>
-                <div class="preference-list">
-                    <div class="preference-item">
-                        <span class="category">👟 Shoes</span>
-                        <span class="sizes">EU 42, 10.5, 11</span>
-                    </div>
-                    <div class="preference-item">
-                        <span class="category">👕 Clothing</span>
-                        <span class="sizes">M, Medium</span>
-                    </div>
-                    <div class="preference-item">
-                        <span class="category">👖 Pants</span>
-                        <span class="sizes">31, 32, 31/32</span>
-                    </div>
-                </div>
-            </section>
-
-            <section class="status">
-                <div class="status-item" id="pageStatus">
-                    <span class="label">Current Page:</span>
-                    <span class="value" id="currentPage">Visit SSENSE</span>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="links">
-                <a href="https://github.com/yourusername/ssense-navigator" target="_blank" class="link">
-                    <span>📚</span> GitHub
-                </a>
-                <a href="https://github.com/yourusername/ssense-navigator/issues" target="_blank" class="link">
-                    <span>🐛</span> Report Bug
-                </a>
-            </div>
-            <div class="credit">
-                Made with ❤️ for SSENSE
-            </div>
-        </footer>
+    <div class="header">
+        <h1>🔥 SSENSE Navigator</h1>
     </div>
-
+    
+    <div class="content">
+        <!-- Keyboard Shortcuts Section -->
+        <div class="shortcuts-section">
+            <h2>⌨️ Keyboard Shortcuts</h2>
+            <div class="shortcuts-grid">
+                <div class="shortcut-item">
+                    <span class="key">←</span>
+                    <span>Previous Image</span>
+                </div>
+                <div class="shortcut-item">
+                    <span class="key">→</span>
+                    <span>Next Image</span>
+                </div>
+                <div class="shortcut-item">
+                    <span class="key">W</span>
+                    <span>Toggle Wishlist</span>
+                </div>
+                <div class="shortcut-item">
+                    <span class="key">?</span>
+                    <span>Show Help</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Size Preferences Section -->
+        <div class="sizes-section">
+            <h2>📏 Size Preferences</h2>
+            
+            <!-- Clothing Sizes -->
+            <div class="size-group">
+                <h3>👕 Clothing</h3>
+                <div class="size-grid">
+                    <div class="size-option">
+                        <input type="checkbox" id="clothing-xs" value="XS">
+                        <label for="clothing-xs" class="size-label">
+                            <div class="size-main">XS (Extra Small)</div>
+                            <div class="size-includes">Includes: XS, IT 44</div>
+                        </label>
+                    </div>
+                    <div class="size-option">
+                        <input type="checkbox" id="clothing-s" value="S">
+                        <label for="clothing-s" class="size-label">
+                            <div class="size-main">S (Small)</div>
+                            <div class="size-includes">Includes: S, SM, IT 46</div>
+                        </label>
+                    </div>
+                    <div class="size-option">
+                        <input type="checkbox" id="clothing-m" value="M">
+                        <label for="clothing-m" class="size-label">
+                            <div class="size-main">M (Medium)</div>
+                            <div class="size-includes">Includes: M, MD, IT 48</div>
+                        </label>
+                    </div>
+                    <div class="size-option">
+                        <input type="checkbox" id="clothing-l" value="L">
+                        <label for="clothing-l" class="size-label">
+                            <div class="size-main">L (Large)</div>
+                            <div class="size-includes">Includes: L, LG, IT 50</div>
+                        </label>
+                    </div>
+                    <div class="size-option">
+                        <input type="checkbox" id="clothing-xl" value="XL">
+                        <label for="clothing-xl" class="size-label">
+                            <div class="size-main">XL (Extra Large)</div>
+                            <div class="size-includes">Includes: XL, IT 52</div>
+                        </label>
+                    </div>
+                    <div class="size-option">
+                        <input type="checkbox" id="clothing-xxl" value="XXL">
+                        <label for="clothing-xxl" class="size-label">
+                            <div class="size-main">XXL</div>
+                            <div class="size-includes">Includes: XXL, 2XL, IT 54</div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Shoe Sizes -->
+            <div class="size-group">
+                <h3>👟 Shoes</h3>
+                <div class="size-grid">
+                    <div class="size-option">
+                        <input type="checkbox" id="shoes-8" value="8">
+                        <label for="shoes-8" class="size-label">
+                            <div class="size-main">US 8</div>
+                            <div class="size-includes">Includes: 8, US 8, EU 41, IT 41</div>
+                        </label>
+                    </div>
+                    <div class="size-option">
+                        <input type="checkbox" id="shoes-8-5" value="8.5">
+                        <label for="shoes-8-5" class="size-label">
+                            <div class="size-main">US 8.5</div>
+                            <div class="size-includes">Includes: 8.5, US 8.5, EU 41.5, IT 41.5</div>
+                        </label>
+                    </div>
+                    <div class="size-option">
+                        <input type="checkbox" id="shoes-9" value="9">
+                        <label for="shoes-9" class="size-label">
+                            <div class="size-main">US 9</div>
+                            <div class="size-includes">Includes: 9, US 9, EU 42, IT 42</div>
+                        </label>
+                    </div>
+                    <div class="size-option">
+                        <input type="checkbox" id="shoes-9-5" value="9.5">
+                        <label for="shoes-9-5" class="size-label">
+                            <div class="size-main">US 9.5</div>
+                            <div class="size-includes">Includes: 9.5, US 9.5, EU 42.5, IT 42.5</div>
+                        </label>
+                    </div>
+                    <div class="size-option">
+                        <input type="checkbox" id="shoes-10" value="10">
+                        <label for="shoes-10" class="size-label">
+                            <div class="size-main">US 10</div>
+                            <div class="size-includes">Includes: 10, US 10, EU 43, IT 43</div>
+                        </label>
+                    </div>
+                    <div class="size-option">
+                        <input type="checkbox" id="shoes-10-5" value="10.5">
+                        <label for="shoes-10-5" class="size-label">
+                            <div class="size-main">US 10.5</div>
+                            <div class="size-includes">Includes: 10.5, US 10.5, EU 43.5, IT 43.5</div>
+                        </label>
+                    </div>
+                    <div class="size-option">
+                        <input type="checkbox" id="shoes-11" value="11">
+                        <label for="shoes-11" class="size-label">
+                            <div class="size-main">US 11</div>
+                            <div class="size-includes">Includes: 11, US 11, EU 44, IT 44</div>
+                        </label>
+                    </div>
+                    <div class="size-option">
+                        <input type="checkbox" id="shoes-11-5" value="11.5">
+                        <label for="shoes-11-5" class="size-label">
+                            <div class="size-main">US 11.5</div>
+                            <div class="size-includes">Includes: 11.5, US 11.5, EU 44.5, IT 44.5</div>
+                        </label>
+                    </div>
+                    <div class="size-option">
+                        <input type="checkbox" id="shoes-12" value="12">
+                        <label for="shoes-12" class="size-label">
+                            <div class="size-main">US 12</div>
+                            <div class="size-includes">Includes: 12, US 12, EU 45, IT 45</div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pants Sizes -->
+            <div class="size-group">
+                <h3>👖 Pants</h3>
+                <div class="size-grid">
+                    <div class="size-option">
+                        <input type="checkbox" id="pants-30" value="30">
+                        <label for="pants-30" class="size-label">
+                            <div class="size-main">W30</div>
+                            <div class="size-includes">Includes: 30, W30, 30"</div>
+                        </label>
+                    </div>
+                    <div class="size-option">
+                        <input type="checkbox" id="pants-31" value="31">
+                        <label for="pants-31" class="size-label">
+                            <div class="size-main">W31</div>
+                            <div class="size-includes">Includes: 31, W31, 31/32</div>
+                        </label>
+                    </div>
+                    <div class="size-option">
+                        <input type="checkbox" id="pants-32" value="32">
+                        <label for="pants-32" class="size-label">
+                            <div class="size-main">W32</div>
+                            <div class="size-includes">Includes: 32, W32, 32/34</div>
+                        </label>
+                    </div>
+                    <div class="size-option">
+                        <input type="checkbox" id="pants-33" value="33">
+                        <label for="pants-33" class="size-label">
+                            <div class="size-main">W33</div>
+                            <div class="size-includes">Includes: 33, W33, 33"</div>
+                        </label>
+                    </div>
+                    <div class="size-option">
+                        <input type="checkbox" id="pants-34" value="34">
+                        <label for="pants-34" class="size-label">
+                            <div class="size-main">W34</div>
+                            <div class="size-includes">Includes: 34, W34, 34"</div>
+                        </label>
+                    </div>
+                    <div class="size-option">
+                        <input type="checkbox" id="pants-36" value="36">
+                        <label for="pants-36" class="size-label">
+                            <div class="size-main">W36</div>
+                            <div class="size-includes">Includes: 36, W36, 36"</div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="actions">
+            <button class="btn btn-primary" id="save-btn">💾 Save Preferences</button>
+            <button class="btn btn-secondary" id="reset-btn">🔄 Reset</button>
+        </div>
+        
+        <!-- Status Message -->
+        <div class="status" id="status-msg"></div>
+        
+        <!-- Footer Note -->
+        <div class="footer-note" style="text-align:center; margin-top:24px; font-size:12px; color:#888;">
+            Made with ❤️ by <a href="https://github.com/evkaw" target="_blank" style="color:#888; text-decoration:underline;">@evkaw on GitHub</a>
+        </div>
+    </div>
+    
     <script src="popup.js"></script>
 </body>
 </html>

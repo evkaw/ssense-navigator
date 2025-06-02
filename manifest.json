@@ -1,10 +1,11 @@
 {
   "manifest_version": 3,
   "name": "SSENSE Navigator",
-  "version": "1.0.0",
-  "description": "Navigate SSENSE product images with arrow keys, smart size selection, and wishlist management",
+  "version": "4.0",
+  "description": "Navigate SSENSE product images with arrow keys, smart size selection, and wishlist management with enhanced exact matching",
   
   "permissions": [
+    "storage",
     "activeTab"
   ],
   
@@ -24,16 +25,9 @@
     }
   ],
   
-  "icons": {
-    "16": "icons/icon-16.png",
-    "32": "icons/icon-32.png", 
-    "48": "icons/icon-48.png",
-    "128": "icons/icon-128.png"
-  },
-  
   "action": {
-    "default_popup": "popup/popup.html",
-    "default_title": "SSENSE Navigator",
+    "default_popup": "popup.html",
+    "default_title": "SSENSE Navigator - Enhanced Size Selection",
     "default_icon": {
       "16": "icons/icon-16.png",
       "32": "icons/icon-32.png",
@@ -42,6 +36,20 @@
     }
   },
   
-  "author": "Your Name",
-  "homepage_url": "https://github.com/yourusername/ssense-navigator"
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/icon-128.png"],
+      "matches": ["https://www.ssense.com/*", "https://ssense.com/*"]
+    }
+  ]
 }
