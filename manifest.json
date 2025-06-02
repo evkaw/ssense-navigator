@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "SSENSE Navigator",
   "version": "4.0",
-  "description": "Navigate SSENSE product images with arrow keys, smart size selection, and wishlist management with enhanced exact matching",
+  "description": "Navigate SSENSE product images with arrow keys, smart size selection, and wishlist management with enhanced exact matching.",
   
   "permissions": [
     "storage",

@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         SSENSE Navigator v4.0 - Fixed Matching + Enhanced Sizes
 // @namespace    http://tampermonkey.net/
-// @version      4.0
-// @description  Navigate SSENSE with exact size matching and comprehensive options
+// @version      4.3
+// @description  Navigate SSENSE product images with arrow keys, smart size selection, and wishlist management with enhanced exact matching.
 // @author       Navigator
 // @match        https://www.ssense.com/*/product/*
 // @match        https://ssense.com/*/product/*
