@@ -58,15 +58,15 @@
 ## 📸 Images & Videos
 
 ### Navigation in Action & Wishlist Management
-<img src="https://github.com/user-attachments/assets/668bc19d-9974-4fb6-97bd-3d2fb3c260a2" width="800" height="500" alt="Image Navigation">
-<img src="https://github.com/user-attachments/assets/ec73675a-84f9-45a6-a3aa-9d945013dafa" width="800" height="500" alt="Add to Wishlist">
-<img src="https://github.com/user-attachments/assets/ff42d721-5a0f-46e5-b9d1-9bc896253454" width="800" height="500" alt="Remove from Wishlist">
+<img src="showcase/showcase-4.png" width="800" height="500" alt="Image Navigation">
+<img src="showcase/showcase-2.png" width="800" height="500" alt="Add to Wishlist">
+<img src="showcase/showcase-3.png" width="800" height="500" alt="Remove from Wishlist">
 
 ### Size Selection Demo
 https://github.com/user-attachments/assets/7d56aa12-a0a3-4c42-a8da-7f39f741bf02
 
 ### Extensive UI
-<img src="https://github.com/user-attachments/assets/285a7cee-4062-408f-8c35-4a609b19b5f9" width="800" height="500" alt="Extensive UI">
+<img src="showcase/showcase-1.png" width="800" height="500" alt="Extensive UI">
 
 ## 🚀 Installation
 
