@@ -27,7 +27,7 @@
 ### ⚙️ **Customizable Preferences**
 - **Popup Interface**:
   - 👕 XS/S/M/L/XL clothing sizes
-  - 👟 US 8-15 / EU 39-48 shoe sizes
+  - 👟 US 8-15 / EU/IT 39-48 shoe sizes
   - 👖 Waist 28-40 pants sizes
 - **Cross-Device Sync**: Chrome storage keeps settings consistent
 
