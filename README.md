@@ -1,6 +1,6 @@
 # SSENSE Navigator Chrome Extension
 
-🛍️ **Navigate SSENSE like a pro with keyboard shortcuts, smart size selection, and instant wishlist management**
+🛍️ **Navigate SSENSE like a pro with keyboard shortcuts, smart size selection, and instant wishlist management.**
 
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/YOUR_EXTENSION_ID?style=flat-square)](https://chrome.google.com/webstore/detail/YOUR_EXTENSION_ID)
 [![Users](https://img.shields.io/chrome-web-store/users/YOUR_EXTENSION_ID?style=flat-square)](https://chrome.google.com/webstore/detail/YOUR_EXTENSION_ID)
