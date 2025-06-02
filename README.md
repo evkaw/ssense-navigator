@@ -131,8 +131,8 @@ We welcome contributions! Here's how to get started:
 ## 🎯 Roadmap
 
 ### v1.1 - Enhanced Features
-- [ ] Shortcut to add to bag
-- [ ] Shortcut for clicking onto the images tab
+- [ ] Shortcut to ADD TO BAG
+- [ ] Shortcut for clicking on the images tab
 
 ### v1.2 - Advanced Navigation  
 - [ ] Zoom functionality with keyboard
