@@ -22,6 +22,7 @@
   - 👕 Clothing: M = Medium = IT48
   - 👟 Shoes: EU 42 = US 10.5
   - 👖 Pants: 32 = W32 = 32/34
+  - 💼 Accessories & Bags: Assumed OS
 - **Fallback System**: Selects first available size if preferences unavailable
 
 ### ⚙️ **Customizable Preferences**
