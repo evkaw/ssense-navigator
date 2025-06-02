@@ -59,15 +59,15 @@
 ## 📸 Images & Videos
 
 ### Navigation in Action & Wishlist Management
-<img src="showcase/showcase-4.png" width="800" height="500" alt="Image Navigation">
-<img src="showcase/showcase-2.png" width="800" height="500" alt="Add to Wishlist">
-<img src="showcase/showcase-3.png" width="800" height="500" alt="Remove from Wishlist">
+<img src="showcase/showcase-4.png" style="max-width: 100%; height: auto;" alt="Image Navigation">
+<img src="showcase/showcase-2.png" style="max-width: 100%; height: auto;" alt="Add to Wishlist">
+<img src="showcase/showcase-3.png" style="max-width: 100%; height: auto;" alt="Remove from Wishlist">
 
 ### Size Selection Demo
 https://github.com/user-attachments/assets/7d56aa12-a0a3-4c42-a8da-7f39f741bf02
 
 ### Extensive UI
-<img src="showcase/showcase-1.png" width="800" height="500" alt="Extensive UI">
+<img src="showcase/showcase-1.png" style="max-width: 100%; height: auto;" alt="Extensive UI">
 
 ## 🚀 Installation
 
