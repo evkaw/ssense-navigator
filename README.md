@@ -2,10 +2,10 @@
 
 🛍️ **Navigate SSENSE like a pro with keyboard shortcuts, smart size selection, and instant wishlist management.**
 
-[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/YOUR_EXTENSION_ID?style=flat-square)](https://chrome.google.com/webstore/detail/YOUR_EXTENSION_ID)
-[![Users](https://img.shields.io/chrome-web-store/users/YOUR_EXTENSION_ID?style=flat-square)](https://chrome.google.com/webstore/detail/YOUR_EXTENSION_ID)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/ajkfjaklncpodlhmgojhpcheopbcdcnh?style=flat-square)](https://chromewebstore.google.com/detail/ajkfjaklncpodlhmgojhpcheopbcdcnh)
+[![Users](https://img.shields.io/chrome-web-store/users/ajkfjaklncpodlhmgojhpcheopbcdcnh?style=flat-square)](https://chromewebstore.google.com/detail/ajkfjaklncpodlhmgojhpcheopbcdcnh)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/yourusername/ssense-navigator?style=flat-square)](https://github.com/yourusername/ssense-navigator)
+[![GitHub Stars](https://img.shields.io/github/stars/yourusername/ssense-navigator?style=flat-square)](https://github.com/evkaw/ssense-navigator)
 
 ## ✨ Key Features
 
