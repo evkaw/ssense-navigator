@@ -5,7 +5,7 @@
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/ajkfjaklncpodlhmgojhpcheopbcdcnh?style=flat-square)](https://chromewebstore.google.com/detail/ajkfjaklncpodlhmgojhpcheopbcdcnh)
 [![Users](https://img.shields.io/chrome-web-store/users/ajkfjaklncpodlhmgojhpcheopbcdcnh?style=flat-square)](https://chromewebstore.google.com/detail/ajkfjaklncpodlhmgojhpcheopbcdcnh)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/yourusername/ssense-navigator?style=flat-square)](https://github.com/evkaw/ssense-navigator)
+[![GitHub Stars](https://img.shields.io/github/stars/evkaw/ssense-navigator?style=flat-square)](https://github.com/evkaw/ssense-navigator)
 
 ## ✨ Key Features
 
@@ -72,7 +72,7 @@ https://github.com/user-attachments/assets/7d56aa12-a0a3-4c42-a8da-7f39f741bf02
 ## 🚀 Installation
 
 ### From Chrome Web Store (Recommended)
-1. Visit the [Chrome Web Store page](https://chrome.google.com/webstore/detail/YOUR_EXTENSION_ID)
+1. Visit the [Chrome Web Store page](https://chrome.google.com/webstore/detail/ajkfjaklncpodlhmgojhpcheopbcdcnh)
 2. Click "Add to Chrome"
 3. Confirm installation
 4. Navigate to any SSENSE product page and start using the extension!
@@ -148,9 +148,9 @@ We welcome contributions! Here's how to get started:
 
 Found a bug or have a feature idea? We'd love to hear from you!
 
-- **Bug Reports**: [Open an issue](https://github.com/yourusername/ssense-navigator/issues/new?template=bug_report.md)
-- **Feature Requests**: [Request a feature](https://github.com/yourusername/ssense-navigator/issues/new?template=feature_request.md)
-- **General Discussion**: [Start a discussion](https://github.com/yourusername/ssense-navigator/discussions)
+- **Bug Reports**: [Open an issue](https://github.com/evkaw/ssense-navigator/issues/new?template=bug_report.md)
+- **Feature Requests**: [Request a feature](https://github.com/evkaw/ssense-navigator/issues/new?template=feature_request.md)
+- **General Discussion**: [Start a discussion](https://github.com/evkaw/ssense-navigator/discussions)
 
 ## 📄 License
 
@@ -167,8 +167,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Need help? Here are your options:
 
 - **Documentation**: Check this README and the [docs](docs/) folder
-- **Issues**: Search existing [issues](https://github.com/yourusername/ssense-navigator/issues) or create a new one
-- **Discussions**: Join the [community discussions](https://github.com/yourusername/ssense-navigator/discussions)
+- **Issues**: Search existing [issues](https://github.com/evkaw/ssense-navigator/issues) or create a new one
+- **Discussions**: Join the [community discussions](https://github.com/evkaw/ssense-navigator/discussions)
 
 ---
 
